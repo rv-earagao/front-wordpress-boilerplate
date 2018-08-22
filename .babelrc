@@ -1,0 +1,20 @@
+{
+	"comments": true,
+	"presets": [
+		[
+			"env",
+			{
+				"targets": {
+					"browsers": [
+						"ie 11"
+					]
+				},
+				"useBuiltIns": true
+			}
+		]
+	],
+	"plugins": [
+		"transform-object-rest-spread",
+		"syntax-dynamic-import"
+	]
+}

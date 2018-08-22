@@ -1,0 +1,80 @@
+{
+	"name": "wordpress-boilerplate",
+	"version": "2.0.0",
+	"description": "Be dynamic",
+	"main": "Gulpfile.js",
+	"repository": "https://github.com/RedVentures/front-static-boilerplate.git",
+	"author": "Red Ventures",
+	"license": "MIT",
+	"private": true,
+	"scripts": {
+		"start": "NODE_ENV='development' gulp",
+		"build": "NODE_ENV='production' gulp build",
+		"deploy": "NODE_ENV='production' gulp deploy",
+		"test": "npm run lint",
+		"setup": "npm i && gulp build",
+		"lint": "npm run lint:js && npm run lint:css",
+		"lint:js": "./node_modules/.bin/eslint ./src/",
+		"lint:css": "./node_modules/.bin/stylint ./",
+		"release:fix": "yarn version --new-version patch",
+		"release:feature": "yarn version --new-version minor"
+	},
+	"cssnano": {
+		"preset": [
+			"default",
+			{
+				"discardComments": {
+					"removeAll": true
+				}
+			}
+		]
+	},
+	"dependencies": {
+		"babel-polyfill": "^6.26.0",
+		"jails-js": "^3.3.4",
+		"jails.packages": "jails-org/packages",
+		"lost": "^8.2.0",
+		"penthouse": "^1.7.3",
+		"rupture": "^0.7.1"
+	},
+	"devDependencies": {
+		"autoprefixer": "^7.2.3",
+		"babel-core": "^6.26.3",
+		"babel-eslint": "7",
+		"babel-loader": "^7.1.4",
+		"babel-plugin-dynamic-import-webpack": "^1.0.2",
+		"babel-plugin-syntax-dynamic-import": "^6.18.0",
+		"babel-plugin-transform-object-rest-spread": "^6.26.0",
+		"babel-preset-env": "^1.6.1",
+		"browser-sync": "^2.19.0",
+		"clean-css": "^4.1.9",
+		"cross-conf-env": "^1.1.2",
+		"cssnano": "^3.10.0",
+		"decode-html": "^2.0.0",
+		"del": "^3.0.0",
+		"eslint": "3.x",
+		"filter-css": "^0.1.2",
+		"gulp": "^3.9.1",
+		"gulp-cheerio": "^0.6.2",
+		"gulp-group-css-media-queries": "^1.2.0",
+		"gulp-htmlmin": "^4.0.0",
+		"gulp-if": "^2.0.2",
+		"gulp-nunjucks": "^3.0.0",
+		"gulp-nunjucks-render": "^2.2.1",
+		"gulp-plumber": "^1.1.0",
+		"gulp-postcss": "^7.0.0",
+		"gulp-rename": "^1.2.2",
+		"gulp-sourcemaps": "^2.6.1",
+		"gulp-stylus": "^2.6.0",
+		"gulp-svgmin": "^1.2.4",
+		"gulp-svgstore": "^6.1.0",
+		"husky": "^0.14.3",
+		"kraken": "^0.3.3",
+		"mkdirp": "^0.5.1",
+		"mustache": "^2.3.0",
+		"offline-plugin": "^4.9.0",
+		"stylint": "^1.5.9",
+		"uglifyjs-webpack-plugin": "^1.2.4",
+		"webpack-stream": "^4.0.0"
+	}
+}

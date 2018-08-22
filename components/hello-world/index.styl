@@ -1,0 +1,32 @@
+.hello-world
+	line-height 1.5
+	text-align center
+
+	img
+		width 200px
+		height 200px
+		margin 0 auto 20px
+		opacity 0
+		display block
+
+		&.ready
+			transition opacity 1s
+			opacity 1
+
+	&__title,
+	&__subtitle
+		font-weight 300
+
+	&__title
+		font-size 70px
+
+	&__subtitle
+		font-size 30px
+
+	ul
+		margin-top 20px
+		li
+			margin-bottom 10px
+		a
+			text-decoration none
+			color #336699

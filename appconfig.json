@@ -1,0 +1,9 @@
+{
+	"development":{
+		"BASE_URL"	  :""
+	},
+
+	"production":{
+		"BASE_URL"	  :"https://xpi.com.br"
+	}
+}

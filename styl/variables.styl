@@ -1,0 +1,43 @@
+// Fonts
+$font-family = 'Roboto', sans-serif
+$font-family-secondary = 'Roboto Slab', serif;
+
+// Colors
+$color-yellow = #ffc709
+$color-black = #18191a
+$color-black-light = #515151
+$color-silver = #c0c0c0
+$color-silver-light = #d8d8d8
+$color-silver-lighten = #e8e8e8
+$color-red = #d54242
+$color-green = #53b955
+$color-viking = #44adc0
+
+// Breakpoins
+$desktop  = 1240px
+$tablet = 1024px
+$mobile = 768px
+
+$mask
+	position absolute
+	width 100%
+	height 100%
+	top 0
+	left 0
+	z-index 5
+
+$is-loading
+	&:after
+		position absolute
+		content ''
+		border-radius 50%
+		width 40px
+		height @width
+		border .25rem solid #f5f5f5
+		border-top-color $color-viking
+		animation spin 1s infinite linear
+		display block
+		z-index 2
+		left calc(50% - 12px)
+		top calc(50% - 29px)
+		transition opacity .6s
