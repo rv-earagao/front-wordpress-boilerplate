@@ -9,15 +9,7 @@
 	"private": true,
 	"scripts": {
 		"start": "NODE_ENV='development' gulp",
-		"build": "NODE_ENV='production' gulp build",
-		"deploy": "NODE_ENV='production' gulp deploy",
-		"test": "npm run lint",
-		"setup": "npm i && gulp build",
-		"lint": "npm run lint:js && npm run lint:css",
-		"lint:js": "./node_modules/.bin/eslint ./src/",
-		"lint:css": "./node_modules/.bin/stylint ./",
-		"release:fix": "yarn version --new-version patch",
-		"release:feature": "yarn version --new-version minor"
+		"build": "NODE_ENV='production' gulp build"
 	},
 	"cssnano": {
 		"preset": [
